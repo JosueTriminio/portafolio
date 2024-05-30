@@ -7,17 +7,15 @@
 
 
 body {
-  position: relative;
   transition: all .2s ease;
-  text-wrap: pretty;
   background-color: rgb(243, 243, 243);
-  height:100vh;
-  color:  rgb(39, 39, 39);
-
+  color: rgb(39, 39, 39);
+  text-wrap: pretty;
+  line-height: 2px;
 }
 
-.dark{
+.dark {
   background-color: rgb(39, 39, 39);
   color: white;
-  transition: all .2s ease-in;
+  transition: all .2s ease-out;
 }

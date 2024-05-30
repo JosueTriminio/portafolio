@@ -13,8 +13,10 @@ export default function Darkmode() {
     useEffect(() => {
      if (dark) {
         document.querySelector('body').classList.add('dark')
+        document.querySelector('.header').classList.add('dark')
      }else{
         document.querySelector('body').classList.remove('dark')
+        document.querySelector('.header').classList.remove('dark')
      }
     }, [dark])
     
