@@ -40,7 +40,7 @@ export default function Card(props) {
                             url={props.url}
                             close={setModal}
                             modal={modal}
-                         />}
+                        />}
                     </div>
                 </div>
             </div>
