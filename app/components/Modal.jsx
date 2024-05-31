@@ -1,13 +1,17 @@
-'use client';
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Modal(props) {
-
+  
   return (
-    <section id="modal" className={`${props.show}  ${props.modal ? 'flex' : 'hidden opacity-0'} 
-                                  justify-center items-center fixed inset-0 bg-[#0000006f]  backdrop-blur-md`}>
-      <div className={` ${props.show}   text-black bg-white  w-[90%] sm:h-[50%]  sm:w-[80%] lg:w-[60%]
-                                        rounded-lg shadow p-2 flex flex-col justify-between items-center `}>
+    <motion.div
+      initial={{opacity:0}} transition={{ duration: .1 }}  animate={{opacity:1}}
+     
+      className={`${props.show}  flex transition-opacity duration-500 justify-center items-center fixed inset-0 bg-[#0000006f]  backdrop-blur-md`}>
+      <motion.div
+        initial={{ scale: 0 }} animate={{ scale: 1 }}
+        className={` ${props.show} text-black bg-white  w-[90%] sm:h-[50%]  sm:w-[80%] lg:w-[60%] rounded-lg shadow p-2 flex flex-col justify-between items-center `}>
 
         <div className="flex flex-col justify-between w-full h-[50%] sm:flex-row gap-4 sm:gap-2">
           <Image src={props.url} className="sm:w-1/2 bg-cover object-cover rounded-lg " />
@@ -18,15 +22,9 @@ export default function Modal(props) {
           </div>
         </div>
         <button className="text-xl text-rose-400 font-bold p-6"
-          onClick={() => props.close()}
-
-
-        >Cerrar</button>
-
-       
-      </div>
-
-    </section>
+          onClick={() => props.close()}>Cerrar</button>
+      </motion.div>
+    </motion.div>
 
   )
 }
