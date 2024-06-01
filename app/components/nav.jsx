@@ -11,10 +11,10 @@ export const Nav = () => {
         <nav className="w-full flex items-center sm:justify-center p-5 relative">
             <ul className=" flex gap-6 xs:gap-12 p-3 text-xs w-max ">
                 <li className="  flex items-center ">
-                    <Link href='/' className={`hover:text-cyan-400 transition-all`}>Inicio</Link>
+                    <Link href='/' className={`hover:text-cyan-400 transition-all font-semibold`}>Inicio</Link>
                 </li>
                 <li className=" flex items-center ">
-                    <Link href='proyectos' className={`hover:text-cyan-400 transition-all`}>Proyectos</Link>
+                    <Link href='proyectos' className={`hover:text-cyan-400 transition-all font-medium`}>Proyectos</Link>
                 </li>
                 <a href="https://github.com/JosueTriminio">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor" viewBox="0 0 512 512">

@@ -24,7 +24,7 @@ export default function Darkmode() {
     return (
         <>
             <button onClick={()=> handleDark()} className={`${dark ? 'hidden' : 'block'} fixed right-14 flex items-center  gap-1 border px-[7px] 
-                                                                      rounded-full shadow  hover:bg-neutral-800 hover:text-white transition-all duration-300`}>
+                                                                      rounded-full shadow hover:shadow-black hover:text-black  shadow-green-400 text-green-400 transition-all duration-300`}>
                 <h6 className='text-xs font-semibold'>Dark</h6>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor" viewBox="0 0 512 512">
                     <path
@@ -33,7 +33,7 @@ export default function Darkmode() {
                 </svg>
             </button>
             <button onClick={()=> handleDark()} className={`${dark ? 'block' : 'hidden'} fixed right-14  flex items-center gap-2 border px-[7px]
-                                                                      rounded-full shadow  bg-white text-black transition-all duration-300`}>
+                                                                      rounded-full shadow shadow-white text-white hover:shadow-green-400 hover:text-green-400 transition-all duration-300`}>
             <h6 className='text-xs font-semibold'>Ligth</h6>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor" viewBox="0 0 512 512">
                     <path
